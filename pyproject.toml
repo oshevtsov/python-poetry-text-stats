@@ -9,6 +9,9 @@ packages = [{include = "text_stats", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 
+[tool.poetry.scripts]
+text-stats = "text_stats.cli:run"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
