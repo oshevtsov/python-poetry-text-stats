@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "text-stats"
+version = "0.1.0"
+description = ""
+authors = ["Oleksii Shevtsov <alex.shevtsov1988@gmail.com>"]
+readme = "README.md"
+packages = [{include = "text_stats", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
