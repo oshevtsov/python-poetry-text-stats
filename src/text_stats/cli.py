@@ -1,5 +1,7 @@
 from argparse import ArgumentParser
 
+import print_color
+
 from text_stats.stats import count_characters, count_lines, count_words
 
 
@@ -12,12 +14,14 @@ def run():
 
     args = parser.parse_args()
 
+    if any([args.characters, args.words, args.lines]):
+        print_color.print("Input stats:", format="bold")
     if args.characters:
-        print(f"Number of characters: {count_characters(args.input)}")
+        print_color.print(count_characters(args.input), tag="chars", tag_color="green")
     if args.words:
-        print(f"Number of words: {count_words(args.input)}")
+        print_color.print(count_words(args.input), tag="words", tag_color="yellow")
     if args.lines:
-        print(f"Number of lines: {count_lines(args.input)}")
+        print_color.print(count_lines(args.input), tag="lines", tag_color="red")
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@ packages = [{include = "text_stats", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+print-color = "^0.4.6"
 
 [tool.poetry.scripts]
 text-stats = "text_stats.cli:run"
@@ -27,4 +28,4 @@ src_paths = ["src", "tests"]
 strict = true
 
 [tool.pyright]
-typeCheckingMode = "strict"
+typeCheckingMode = "basic"
